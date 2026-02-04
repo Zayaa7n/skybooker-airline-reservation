@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        a {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Welcome {{ session["user"] }} 👋</h2>
+
+        <a href="{{ url_for('flights') }}">Search Flights</a>
+        <a href="{{ url_for('index') }}">Logout</a>
+    </div>
+</body>
+</html>
+
